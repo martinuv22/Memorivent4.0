@@ -37,12 +37,23 @@ class ProductManager{
         this.product.push(event)
     
     }
-    
-    
+    getProductById(event_id){
+        let uno = this.product.find(each=> each.id === event_id)
+        if(uno){
+            console.log(uno)
+            return uno
+        }else{
+console.log('Not found')
+
+        }
+
+    }
+
     }
     let producto = new ProductManager()
-    producto.addProduct({title:'pendrive',description:'50G',price:'5000',thumbnail:"imagen",stock:50})
-    producto.addProduct({title:'pendrive',description:'100G',price:'10000',thumbnail:"imagen",stock:100})
+    producto.addProduct({title:'pendrive1',description:'50G',price:'5000',thumbnail:"imagen",stock:50})
+    producto.addProduct({title:'pendrive2',description:'100G',price:'10000',thumbnail:"imagen",stock:100})
     producto.getProducts()
-    
+    producto.getProductById(2)
+    producto.getProductById(5)
 
