@@ -12,6 +12,8 @@ stock (número de piezas disponibles)*/
 /*Debe contar con un método “addProduct” el cual agregará un producto al arreglo de productos inicial.
 Todos los campos son obligatorios menos id que debe agregarse automáticamente  y auto- incrementable*/
 //Debe contar con un método “getProducts” el cual debe devolver el arreglo con todos los productos creados hasta ese momento
+/*Debe contar con un método “getProductById” el cual debe buscar en el arreglo el producto que coincida con el id
+En caso de no coincidir ningún id, mostrar en consola un error “Not found”*/
 
 class ProductManager{
     constructor(){
@@ -51,8 +53,8 @@ console.log('Not found')
 
     }
     let producto = new ProductManager()
-    producto.addProduct({title:'pendrive1',description:'50G',price:'5000',thumbnail:"imagen",stock:50})
-    producto.addProduct({title:'pendrive2',description:'100G',price:'10000',thumbnail:"imagen",stock:100})
+    producto.addProduct({title:'pendrive1',description: 'Marca: SanDisk, capacidad: 50G',price:'5000',thumbnail: 'img src="imagenes/Sandisk.jpg',stock:50});
+    producto.addProduct({title:'pendrive2',description:'Marca: Kingtong, capacidad: 100G',price:'10000',thumbnail: 'img src="imagenes/Sandisk.jpg',stock:100});
     producto.getProducts()
     producto.getProductById(2)
     producto.getProductById(5)
