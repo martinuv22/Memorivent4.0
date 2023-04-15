@@ -52,6 +52,7 @@ console.log('Not found')
     }
 
     }
+    
     let producto = new ProductManager()
     producto.addProduct({title:'pendrive1',description: 'Marca: SanDisk, capacidad: 50G',price:'5000',thumbnail: 'img src="imagenes/Sandisk.jpg',stock:50});
     producto.addProduct({title:'pendrive2',description:'Marca: Kingtong, capacidad: 100G',price:'10000',thumbnail: 'img src="imagenes/Sandisk.jpg',stock:100});
