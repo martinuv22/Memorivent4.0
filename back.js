@@ -16,17 +16,16 @@ Todos los campos son obligatorios menos id que debe agregarse automáticamente  
 En caso de no coincidir ningún id, mostrar en consola un error “Not found”*/
 
 class ProductManager{
+
     constructor(){
+
     
     this.product= []
     
     }
-    getProducts(){
-     console.log(this.product)
-        return this.product
-            
-        }
+    
     addProduct({title,description,price,thumbnail,stock}){
+
         let id 
         if(this.product.length===0){
             id =1
@@ -39,7 +38,14 @@ class ProductManager{
         this.product.push(event)
     
     }
+    getProducts(){
+
+        console.log(this.product)
+           return this.product
+               
+           }
     getProductById(event_id){
+
         let uno = this.product.find(each=> each.id === event_id)
         if(uno){
             console.log(uno)
